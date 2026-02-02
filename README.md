@@ -17,24 +17,24 @@ projects.
 - Git & GitHub for version control
 
 ## Project Structure
+```text
 .
 ├── app.py
 ├── requirements.txt
 ├── static/
-│ ├── style.css
-│ ├── Resume_Ezzell_2026.pdf
-│ └── AMS_Poster.pdf
+│   ├── style.css
+│   ├── Resume_Ezzell_2026.pdf
+│   └── AMS_Poster.pdf
 └── templates/
-├── index.html
-├── resume.html
-├── projects.html
-└── sandbox.html
-
+    ├── index.html
+    ├── resume.html
+    ├── projects.html
+    └── sandbox.html
+```
 
 ## Notes
 This repository is intended for portfolio and demonstration purposes.
 Production deployment is handled on a separate server.
 
 ## Author
-**Jackson Ezzell**
-
+Jackson Ezzell
