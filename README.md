@@ -17,16 +17,3 @@ projects.
 - Git & GitHub for version control
 
 ## Project Structure
-.
-├── app.py
-├── requirements.txt
-├── static/
-│ ├── style.css
-│ ├── Resume_Ezzell_2026.pdf
-│ └── AMS_Poster.pdf
-└── templates/
-├── index.html
-├── resume.html
-├── projects.html
-└── sandbox.html
-
