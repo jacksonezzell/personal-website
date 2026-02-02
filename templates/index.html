@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jackson Ezzell</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='999') }}">
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- TOP NAV TABS -->
+    <nav class="tabs" aria-label="Primary">
+      <a class="tab {% if active_page == 'home' %}active{% endif %}" href="{{ url_for('home') }}">Home</a>
+      <a class="tab {% if active_page == 'projects' %}active{% endif %}" href="{{ url_for('projects') }}">Projects</a>
+      <a class="tab {% if active_page == 'resume' %}active{% endif %}" href="{{ url_for('resume') }}">Resume</a>
+      <a class="tab {% if active_page == 'sandbox' %}active{% endif %}" href="{{ url_for('sandbox') }}">Sandbox</a>
+    </nav>
+
+    <header class="header">
+      <h1 class="title">Hi, I am Jackson Ezzell</h1>
+      <p class="subtitle">
+        I’m an Atmospheric &amp; Environmental Sciences graduate student
+        interested in hydrology, remote sensing, and modeling. This site is my
+        professional portfolio <span class="kbd">+</span> a technical playground
+        for projects, experiments, and tools.
+	
+      </p>
+    </header>
+  <section class="panel">
+     <p style="margin:0; line-height:1.7;">
+    This site is a fully custom project that I designed and built from the ground up. 
+    I designed it as a flexible space to share research, document projects, and
+    experiment with ideas as they evolve.
+  </p>
+
+  <p style="margin:14px 0 0; line-height:1.7;">
+    The structure and design are intentionally lightweight, allowing the site
+    to grow alongside my work in atmospheric science, hydrology, and
+    environmental modeling.
+  </p>
+</section>
+
+
+    <div class="footer">
+      <span style="opacity:0.8;">©</span>
+      <span id="y"></span> Jackson Ezzell
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

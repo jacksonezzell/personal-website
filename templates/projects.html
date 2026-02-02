@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Jackson Ezzell</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <nav class="tabs" aria-label="Primary">
+      <a class="tab {% if active_page == 'home' %}active{% endif %}" href="{{ url_for('home') }}">Home</a>
+      <a class="tab {% if active_page == 'projects' %}active{% endif %}" href="{{ url_for('projects') }}">Projects</a>
+      <a class="tab {% if active_page == 'resume' %}active{% endif %}" href="{{ url_for('resume') }}">Resume</a>
+      <a class="tab {% if active_page == 'sandbox' %}active{% endif %}" href="{{ url_for('sandbox') }}">Sandbox</a>
+    </nav>
+
+    <header class="header">
+      <h1 class="title">Projects</h1>
+      <p class="subtitle">A growing list of research + code + experiments.</p>
+    </header>
+
+<section class="panel">
+  <h2 class="section-title">Master’s Thesis Research</h2>
+
+
+  <p style="margin:14px 0 0; line-height:1.7;">
+Future uncertainties in climate prediction, especially over watersheds in continental and semi-arid regions, necessitate that stakeholders understand the ranges of potential water availability, including both excesses and deficits, to evaluate expected water use and quality. The NSF-funded “Advancing Quality and Climate-Resilient Water Management with Community Partnerships and Enhanced Sensor Network (AQUA-CLIME)” aims to provide such guidance to community stakeholders across various environments through new sensor technology and decision-support modeling for underserved communities.
+
+The projects’ decision support elements need initial forward projections of water availability. However, hydrologic fields that can offer probabilistic insights are often limited in the number of variables (e.g., temperature and precipitation), which are not enough to directly drive more detailed landscape and water resource models. This is especially true for downscaled model output.
+
+To create a basic set of water budgets, we use downscaled current and future climate data, specifically the LOCA2 downscaled CMIP6 ensembles supported by select dynamically downscaled simulations, to generate a range of potential water budget outcomes for scenarios. Here, we apply the traditional Thornthwaite-Mather budget method and basic drought indices, which depend solely on temperature and precipitation data to estimate evaporation, soil storage, snowpack, basin recharge, and deficits. These are then used with climatological monthly averages or longer time series to assess the likelihood of extreme periods, such as droughts and floods
+  </p>
+
+  <div class="btn-row" style="margin-top:16px;">
+    <a class="btn"
+       href="{{ url_for('static', filename='AMS_Poster.pdf') }}"
+       target="_blank"
+       rel="noreferrer">
+      View AMS Poster (PDF)
+    </a>
+  </div>
+<div class="panel" style="padding:0; overflow:hidden; margin-top:16px;">
+  <iframe
+    src="{{ url_for('static', filename='AMS_Poster.pdf') }}"
+    style="width:100%; height:900px; border:0;"
+    title="AMS Poster PDF">
+  </iframe>
+</div>
+
+</section>
+
+    <div class="footer">
+      <span style="opacity:0.8;">©</span> <span id="y"></span> Jackson Ezzell
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
